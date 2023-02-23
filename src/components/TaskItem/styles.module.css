@@ -1,0 +1,14 @@
+.taskItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #039e83;
+  border-radius: 4px;
+}
