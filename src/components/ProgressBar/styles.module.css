@@ -1,0 +1,22 @@
+.container {
+  height: 24px;
+  width: 100%;
+  background-color: #f2fbfa;
+  border-radius: 24px;
+}
+.filler {
+  height: 100%;
+  background-color: #00b797;
+  border-radius: 16px;
+  text-align: right;
+  transition: "width 1s ease-in-out";
+}
+
+.label {
+  padding-right: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #f2fbfa;
+}
