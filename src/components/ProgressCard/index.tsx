@@ -1,11 +1,14 @@
 import { useState } from "react";
 import ProgressBar from "../ProgressBar";
+import { TaskGroup } from "../TaskGroup";
 import { TaskItem } from "../TaskItem";
 
 import styles from "./styles.module.css";
 
 export const ProgressCard = () => {
   const [check, setCheck] = useState(false);
+
+  console.log(check);
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
@@ -17,6 +20,11 @@ export const ProgressCard = () => {
         >
           task test
         </TaskItem>
+      </div>
+      <div className={styles.content}>
+        {[1, 2, 3].map((id) => (
+          <TaskGroup id={id} />
+        ))}
       </div>
     </div>
   );

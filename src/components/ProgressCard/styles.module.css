@@ -23,3 +23,12 @@
   line-height: 24px;
   color: #333333;
 }
+
+.content {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.content > div:not(:last-child) {
+  border-bottom: 1px solid #dddddd;
+}

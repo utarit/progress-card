@@ -8,8 +8,13 @@ interface Props {
 
 export const TaskItem = ({ children, isChecked, onTaskClick }: Props) => {
   return (
-    <label className={styles.taskItem} onClick={onTaskClick}>
-      <input className={styles.checkbox} checked={isChecked} type="checkbox" />
+    <label className={styles.taskItem}>
+      <input
+        className={styles.checkbox}
+        checked={isChecked}
+        onChange={onTaskClick}
+        type="checkbox"
+      />
       {children}
     </label>
   );
