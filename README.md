@@ -2,6 +2,10 @@
 
 This components show a progress bar with a grouped checkbox data with uneven values.
 
+## See the project
+
+You can see the project from the this link: https://progress-card.vercel.app/.
+
 ## How to run locally
 
 1. Clone or download the repository
