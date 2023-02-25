@@ -2,11 +2,12 @@ import IArrow from "../../assets/arrow-down.svg";
 import ICompleted from "../../assets/completed.svg";
 import ITask from "../../assets/task.svg";
 
-import styles from "./styles.module.css";
-import { TaskGroup as TaskGroupType } from "../../types";
+import { TaskGroupType } from "../../types";
 import classNames from "classnames";
 import { useState } from "react";
 import { TaskItem } from "../TaskItem";
+
+import styles from "./styles.module.css";
 
 interface Props {
   taskGroup: TaskGroupType;

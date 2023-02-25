@@ -1,10 +1,10 @@
-export interface Task {
+export interface TaskType {
   checked: boolean;
   description: string;
   value: number;
 }
 
-export interface TaskGroup {
+export interface TaskGroupType {
   name: string;
-  tasks: Task[];
+  tasks: TaskType[];
 }

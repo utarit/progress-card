@@ -7,7 +7,13 @@ const URL =
 function App() {
   const { state: taskState, toggle } = useTasks(URL);
 
-  return <ProgressCard taskGroups={taskState} toggleTask={toggle} />;
+  return (
+    <ProgressCard
+      taskGroups={taskState}
+      title="Lodgify Grouped Tasks"
+      toggleTask={toggle}
+    />
+  );
 }
 
 export default App;

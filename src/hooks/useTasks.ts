@@ -1,9 +1,9 @@
 import { useEffect, useReducer, useState } from "react";
-import { TaskGroup } from "../types";
+import { TaskGroupType } from "../types";
 
 type LoadAction = {
   type: "load_data";
-  payload: TaskGroup[];
+  payload: TaskGroupType[];
 };
 
 type ToggleAction = {
@@ -20,7 +20,7 @@ export const useTasks = (url: string) => {
       const response = await fetch(url);
 
       if (response.ok) {
-        const data: TaskGroup[] = await response.json();
+        const data: TaskGroupType[] = await response.json();
         dispatch({ type: "load_data", payload: data });
       }
     }
@@ -34,7 +34,7 @@ export const useTasks = (url: string) => {
   return { state, toggle };
 };
 
-function reducer(state: TaskGroup[], action: Action) {
+function reducer(state: TaskGroupType[], action: Action) {
   switch (action.type) {
     case "load_data": {
       return action.payload;

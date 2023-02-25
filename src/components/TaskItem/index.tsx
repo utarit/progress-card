@@ -1,10 +1,10 @@
 import { useCallback } from "react";
-import { Task } from "../../types";
+import { TaskType } from "../../types";
 import styles from "./styles.module.css";
 
 interface Props {
   groupName: string;
-  task: Task;
+  task: TaskType;
   toggleTask: (group: string, taskDesc: string) => void;
 }
 
