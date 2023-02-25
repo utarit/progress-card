@@ -2,6 +2,12 @@
 
 This components show a progress bar with a grouped checkbox data with uneven values.
 
+## How to run locally
+
+1. Clone or download the repository
+2. `yarn`
+3. `yarn dev`
+
 | prop name    | type                                                   | description                                                                                                                                                                                      |
 | ------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `taskGroups` | `TaskGroup[]`                                          | The array of task groups. The main state that is used to construct the components of the card.                                                                                                   |
