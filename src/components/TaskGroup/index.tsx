@@ -1,21 +1,63 @@
-import ITask from "../../assets/task.svg";
 import IArrow from "../../assets/arrow-down.svg";
+import ICompleted from "../../assets/completed.svg";
+import ITask from "../../assets/task.svg";
 
 import styles from "./styles.module.css";
+import { TaskGroup as TaskGroupType } from "../../types";
+import classNames from "classnames";
+import { useState } from "react";
+import { TaskItem } from "../TaskItem";
 
 interface Props {
-  id: number;
+  taskGroup: TaskGroupType;
+  toggleTask: (groupName: string, taskDesc: string) => void;
 }
 
-export const TaskGroup = ({ id }: Props) => {
+export const TaskGroup = ({ taskGroup, toggleTask }: Props) => {
+  const [isTasksOpen, setIsTasksOpen] = useState(false);
+  const allTasksChecked = taskGroup.tasks.reduce(
+    (allChecked, next) => allChecked && next.checked,
+    true
+  );
+
+  const handleToggleTask = (taskDesc: string) => {
+    toggleTask(taskGroup.name, taskDesc);
+  };
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>
-        <img src={ITask} /> Group {id}
-      </div>
-      <div className={styles.actions}>
-        Show <img src={IArrow} />
-      </div>
+      <button
+        className={styles.header}
+        onClick={() => setIsTasksOpen((prev) => !prev)}
+      >
+        <div
+          className={classNames(
+            styles.title,
+            allTasksChecked && styles.allChecked
+          )}
+        >
+          <img src={allTasksChecked ? ICompleted : ITask} /> {taskGroup.name}
+        </div>
+        <div className={styles.actions}>
+          {isTasksOpen ? "Hide" : "Show"}{" "}
+          <img
+            src={IArrow}
+            className={classNames(
+              isTasksOpen ? styles.hideArrow : styles.showArrow
+            )}
+          />
+        </div>
+      </button>
+      {isTasksOpen && (
+        <div className={styles.taskContent}>
+          {taskGroup.tasks.map((task) => (
+            <TaskItem
+              task={task}
+              toggle={() => handleToggleTask(task.description)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

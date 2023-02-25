@@ -5,7 +5,7 @@ interface Props {
 }
 
 const ProgressBar = ({ progress }: Props) => {
-  const progressPercentage = `${progress}%`;
+  const progressPercentage = `${Math.round(progress)}%`;
 
   return (
     <div className={styles.container}>

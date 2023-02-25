@@ -1,21 +1,21 @@
+import { Task } from "../../types";
 import styles from "./styles.module.css";
 
 interface Props {
-  children: React.ReactNode;
-  isChecked: boolean;
-  onTaskClick: () => void;
+  task: Task;
+  toggle: () => void;
 }
 
-export const TaskItem = ({ children, isChecked, onTaskClick }: Props) => {
+export const TaskItem = ({ task, toggle }: Props) => {
   return (
     <label className={styles.taskItem}>
       <input
         className={styles.checkbox}
-        checked={isChecked}
-        onChange={onTaskClick}
+        checked={task.checked}
+        onChange={toggle}
         type="checkbox"
       />
-      {children}
+      {task.description}
     </label>
   );
 };

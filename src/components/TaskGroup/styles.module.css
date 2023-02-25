@@ -1,13 +1,19 @@
 .wrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  all: unset;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
   font-weight: 400;
   cursor: pointer;
+  width: 100%;
 }
-
 .title {
   display: flex;
   flex-direction: row;
@@ -15,6 +21,10 @@
   gap: 16px;
   font-size: 18px;
   line-height: 22px;
+}
+
+.title.allChecked {
+  color: #00b797;
 }
 
 .actions {
@@ -25,4 +35,18 @@
   font-size: 16px;
   line-height: 20px;
   color: #999999;
+}
+
+.showArrow {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hideArrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.taskContent {
+  padding-top: 8px;
 }
