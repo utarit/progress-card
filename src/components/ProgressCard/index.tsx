@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { TaskGroup as TaskGroupType } from "../../types";
 import ProgressBar from "../ProgressBar";
 import { TaskGroup } from "../TaskGroup";
@@ -9,12 +9,9 @@ import styles from "./styles.module.css";
 interface Props {
   taskGroups: TaskGroupType[];
   toggleTask: (groupName: string, taskDesc: string) => void;
-  totalValue: number;
 }
 
-export const ProgressCard = ({ taskGroups, toggleTask, totalValue }: Props) => {
-  const [check, setCheck] = useState(false);
-
+export const ProgressCard = ({ taskGroups, toggleTask }: Props) => {
   const checkedValue = taskGroups.reduce((total, nextGroup) => {
     return (
       total +
@@ -26,9 +23,22 @@ export const ProgressCard = ({ taskGroups, toggleTask, totalValue }: Props) => {
     );
   }, 0);
 
+  const totalValue = useMemo(
+    () =>
+      taskGroups.reduce((total, nextGroup) => {
+        return (
+          total +
+          nextGroup.tasks.reduce(
+            (groupTotal, nextTask) => groupTotal + nextTask.value,
+            0
+          )
+        );
+      }, 0),
+    [taskGroups.length]
+  );
+
   const progress = (checkedValue * 100) / totalValue;
 
-  console.log(check);
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
