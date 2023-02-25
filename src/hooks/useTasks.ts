@@ -13,14 +13,11 @@ type ToggleAction = {
 
 type Action = LoadAction | ToggleAction;
 
-const URL =
-  "https://gist.githubusercontent.com/huvber/ba0d534f68e34f1be86d7fe7eff92c96/raw/98a91477905ea518222a6d88dd8b475328a632d3/mock-progress";
-
-export const useTasks = () => {
+export const useTasks = (url: string) => {
   const [state, dispatch] = useReducer(reducer, []);
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(URL);
+      const response = await fetch(url);
 
       if (response.ok) {
         const data: TaskGroup[] = await response.json();

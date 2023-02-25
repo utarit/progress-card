@@ -20,10 +20,6 @@ export const TaskGroup = ({ taskGroup, toggleTask }: Props) => {
     true
   );
 
-  const handleToggleTask = (taskDesc: string) => {
-    toggleTask(taskGroup.name, taskDesc);
-  };
-
   return (
     <div className={styles.wrapper}>
       <button
@@ -52,8 +48,9 @@ export const TaskGroup = ({ taskGroup, toggleTask }: Props) => {
         <div className={styles.taskContent}>
           {taskGroup.tasks.map((task) => (
             <TaskItem
+              groupName={taskGroup.name}
               task={task}
-              toggle={() => handleToggleTask(task.description)}
+              toggleTask={toggleTask}
             />
           ))}
         </div>
