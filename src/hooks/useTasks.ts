@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer } from "react";
 import { TaskGroupType } from "../types";
 
 type LoadAction = {
@@ -15,6 +15,7 @@ type Action = LoadAction | ToggleAction;
 
 export const useTasks = (url: string) => {
   const [state, dispatch] = useReducer(reducer, []);
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(url);

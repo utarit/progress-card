@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { TaskGroupType } from "../../types";
 import ProgressBar from "../ProgressBar";
 import { TaskGroup } from "../TaskGroup";
-import { TaskItem } from "../TaskItem";
 
 import styles from "./styles.module.css";
 
