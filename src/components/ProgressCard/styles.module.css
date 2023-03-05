@@ -33,3 +33,21 @@
 .content > div:not(:last-child) {
   border-bottom: 1px solid #dddddd;
 }
+
+@media (max-width: 400px) {
+  .card {
+    width: 250px;
+  }
+}
+
+@media (min-width:400px) and (max-width: 600px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media (min-width:600px) and (max-width: 800px) {
+  .card {
+    width: 550px;
+  }
+}

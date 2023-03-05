@@ -21,7 +21,7 @@ export const TaskItem = ({ groupName, task, toggleTask }: Props) => {
         onChange={handleToggle}
         type="checkbox"
       />
-      {task.description}
+      <p className={styles.description}>{task.description}</p>
     </label>
   );
 };

@@ -50,3 +50,10 @@
 .taskContent {
   padding-top: 8px;
 }
+
+@media (max-width: 430px) {
+  .title{
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

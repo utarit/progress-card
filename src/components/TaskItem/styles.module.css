@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px;
+  padding: 12px;
   gap: 16px;
   cursor: pointer;
+}
+
+.description{
+  font-size: 15px;
 }
 
 .checkbox {
@@ -12,4 +16,32 @@
   height: 16px;
   accent-color: #039e83;
   border-radius: 4px;
+}
+
+@media (max-width: 400px) {
+
+  .taskItem {
+    padding: 4px;
+  }
+  .description{
+    font-size: 10px;
+  }
+}
+
+@media (min-width:400px) and (max-width: 600px) {
+  .taskItem {
+    padding: 8px;
+  }
+  .description{
+    font-size: 12px;
+  }
+}
+
+@media (min-width:600px) and (max-width: 800px) {
+  .taskItem {
+    padding: 12px;
+  }
+  .description{
+    font-size: 14px;
+  }
 }
