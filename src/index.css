@@ -3,7 +3,7 @@
   --primaryAccentColor: #039e83;
   --backgroundColor: #f2fbfa;
   --textGray: #999999;
-  --backgroundColor: #242424;
+  --backgroundColorDark: #242424;
   --borderColor: #cccccc;
   --borderBottomColor: #dddddd;
   --cardBackgroundColor: #ffffff;
@@ -15,7 +15,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: var(--backgroundColor);
+  background-color: var(--backgroundColorDark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
