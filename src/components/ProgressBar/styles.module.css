@@ -1,12 +1,12 @@
 .container {
   height: 24px;
   width: 100%;
-  background-color: #f2fbfa;
+  background-color: var(--progressSecondaryColor);
   border-radius: 24px;
 }
 .filler {
   height: 100%;
-  background-color: #00b797;
+  background-color: var(--primaryColor);
   border-radius: 16px;
   text-align: right;
   transition: width 1s ease-in-out;
@@ -18,5 +18,5 @@
   font-size: 16px;
   line-height: 20px;
   text-align: right;
-  color: #f2fbfa;
+  color: var(--progressSecondaryColor);
 }

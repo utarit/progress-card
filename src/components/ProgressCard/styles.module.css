@@ -4,8 +4,8 @@
   align-items: stretch;
   padding: 16px;
   width: 820px;
-  background: #ffffff;
-  border: 1px solid #cccccc;
+  background: var(--cardBackgroundColor);
+  border: 1px solid var(--contentBorderColor);
   border-radius: 8px;
 }
 
@@ -21,17 +21,17 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
-  color: #333333;
+  color: var(--titleColor);
   margin: 0;
 }
 
 .content {
-  border: 1px solid #cccccc;
+  border: 1px solid var(--contentBorderColor);
   border-radius: 8px;
 }
 
 .content > div:not(:last-child) {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid var(--taskBorderColor);
 }
 
 @media (max-width: 400px) {
