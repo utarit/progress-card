@@ -24,7 +24,7 @@
 }
 
 .title.allChecked {
-  color: #00b797;
+  color: var(--primaryColor);
 }
 
 .actions {
@@ -34,7 +34,7 @@
   gap: 16px;
   font-size: 16px;
   line-height: 20px;
-  color: #999999;
+  color: var(--textGray);
 }
 
 .showArrow {

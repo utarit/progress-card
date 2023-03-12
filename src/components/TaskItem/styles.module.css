@@ -14,7 +14,7 @@
 .checkbox {
   width: 16px;
   height: 16px;
-  accent-color: #039e83;
+  accent-color: var(--primaryAccentColor);
   border-radius: 4px;
 }
 

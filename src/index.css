@@ -2,8 +2,14 @@
   --primaryColor: #00b797;
   --primaryAccentColor: #039e83;
   --backgroundColor: #f2fbfa;
-  --progressBackgroundColor: #999999;
+  --textGray: #999999;
   --backgroundColor: #242424;
+  --borderColor: #cccccc;
+  --borderBottomColor: #dddddd;
+  --cardBackgroundColor: #ffffff;
+  --titleColor: #333333;
+
+
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
