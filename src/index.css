@@ -1,11 +1,11 @@
 :root {
   --primaryColor: #00b797;
   --primaryAccentColor: #039e83;
-  --backgroundColor: #f2fbfa;
+  --progressSecondaryColor: #f2fbfa;
   --textGray: #999999;
   --backgroundColorDark: #242424;
-  --borderColor: #cccccc;
-  --borderBottomColor: #dddddd;
+  --contentBorderColor: #cccccc;
+  --taskBorderColor: #dddddd;
   --cardBackgroundColor: #ffffff;
   --titleColor: #333333;
 

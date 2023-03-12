@@ -1,7 +1,7 @@
 .container {
   height: 24px;
   width: 100%;
-  background-color: var(--backgroundColor);
+  background-color: var(--progressSecondaryColor);
   border-radius: 24px;
 }
 .filler {
@@ -18,5 +18,5 @@
   font-size: 16px;
   line-height: 20px;
   text-align: right;
-  color: var(--backgroundColor);
+  color: var(--progressSecondaryColor);
 }

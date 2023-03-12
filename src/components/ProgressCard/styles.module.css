@@ -5,7 +5,7 @@
   padding: 16px;
   width: 820px;
   background: var(--cardBackgroundColor);
-  border: 1px solid var(--borderColor);
+  border: 1px solid var(--contentBorderColor);
   border-radius: 8px;
 }
 
@@ -26,12 +26,12 @@
 }
 
 .content {
-  border: 1px solid var(--borderColor);
+  border: 1px solid var(--contentBorderColor);
   border-radius: 8px;
 }
 
 .content > div:not(:last-child) {
-  border-bottom: 1px solid var(--borderBottomColor);
+  border-bottom: 1px solid var(--taskBorderColor);
 }
 
 @media (max-width: 400px) {
