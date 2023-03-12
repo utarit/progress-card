@@ -1,14 +1,16 @@
 import { useCallback } from "react";
+import { useTasks } from "../../hooks/useTasks";
 import { TaskType } from "../../types";
 import styles from "./styles.module.css";
 
 interface Props {
   groupName: string;
   task: TaskType;
-  toggleTask: (group: string, taskDesc: string) => void;
 }
 
-export const TaskItem = ({ groupName, task, toggleTask }: Props) => {
+export const TaskItem = ({ groupName, task }: Props) => {
+  const { toggleTask } = useTasks();
+
   const handleToggle = useCallback(() => {
     toggleTask(groupName, task.description);
   }, []);

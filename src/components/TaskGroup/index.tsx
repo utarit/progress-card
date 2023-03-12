@@ -11,10 +11,9 @@ import styles from "./styles.module.css";
 
 interface Props {
   taskGroup: TaskGroupType;
-  toggleTask: (groupName: string, taskDesc: string) => void;
 }
 
-export const TaskGroup = ({ taskGroup, toggleTask }: Props) => {
+export const TaskGroup = ({ taskGroup }: Props) => {
   const [isTasksOpen, setIsTasksOpen] = useState(false);
   const allTasksChecked = taskGroup.tasks.reduce(
     (allChecked, next) => allChecked && next.checked,
@@ -48,11 +47,7 @@ export const TaskGroup = ({ taskGroup, toggleTask }: Props) => {
       {isTasksOpen && (
         <div className={styles.taskContent}>
           {taskGroup.tasks.map((task) => (
-            <TaskItem
-              groupName={taskGroup.name}
-              task={task}
-              toggleTask={toggleTask}
-            />
+            <TaskItem groupName={taskGroup.name} task={task} />
           ))}
         </div>
       )}

@@ -1,10 +1,9 @@
+import { useTasks } from "../../hooks/useTasks";
 import styles from "./styles.module.css";
 
-interface Props {
-  progress: number;
-}
+const ProgressBar = () => {
+  const { progress } = useTasks();
 
-const ProgressBar = ({ progress }: Props) => {
   const progressPercentage = `${Math.round(progress)}%`;
 
   return (
