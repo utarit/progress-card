@@ -1,0 +1,8 @@
+.content {
+  border: 1px solid var(--contentBorderColor);
+  border-radius: 8px;
+}
+
+.content > div:not(:last-child) {
+  border-bottom: 1px solid var(--taskBorderColor);
+}
